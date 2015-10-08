@@ -33,8 +33,24 @@ class SignupVC: UIViewController {
             self.messageLabel.text = "Passwords Do Not Match"
         }
         if usrEntered != "" && pwdEntered != "" {
+            userSignUp()
         } else {
-            self.messageLabel.text = "All Fields Required"
+            self.messageLabel.text = "All Fields Required!"
+        }
+    }
+    
+    func userSignUp() {
+        var user = PFUser()
+        user.username = txtUsername.text
+        user.password = txtPassword.text
+        user.signUpInBackgroundWithBlock {
+            (succeeded: Bool, error: NSError?) -> Void in
+            if error == nil {
+                // Hooray! Let them use the app now.
+                self.messageLabel.text = "User Signed Up";
+            } else {
+                // Show the errorString somewhere and let the user try again.
+            }
         }
     }
 
