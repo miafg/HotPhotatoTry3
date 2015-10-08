@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import Foundation
 
 class LoginVC: UIViewController {
 
     
     @IBOutlet weak var txtUsername: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
+    @IBOutlet weak var loginMsgTxt: UILabel!
     
     
     override func viewDidLoad() {
@@ -28,8 +30,38 @@ class LoginVC: UIViewController {
     
     @IBAction func signinTapped(sender: UIButton) {
         //Authentication Code
+        if txtUsername.text != "" && txtPassword.text != "" {
+            // Not Empty, Do something.
+        } else if txtUsername == "" {
+            // Empty, Notify user
+            self.loginMsgTxt.text = "Username required!"
+        } else if txtPassword == "" {
+            self.loginMsgTxt.text = "Password Required!"
+        } else {
+            self.loginMsgTxt.text = "Both fields Required!"
+        }
     }
     
+    @IBAction func usernameKeyBoardResign(sender: AnyObject) {
+        //sender.resignFirstResponder()
+        
+    }
+    @IBAction func userKeyBoardResignTouch(sender: AnyObject) {
+       // sender.resignFirstResponder()
+        txtUsername.addTarget(nil, action:"firstResponderAction:", forControlEvents:.EditingDidEndOnExit)
+
+    }
+    @IBAction func userKeyBoardResignTouchUpOutside(sender: AnyObject) {
+        //sender.resignFirstResponder()
+
+    }
+    @IBAction func userKeyBoardResignEditEnd(sender: AnyObject) {
+        //sender.resignFirstResponder()
+    }
+    
+    @IBAction func pwKeyBoardResign(sender: AnyObject) {
+        sender.resignFirstResponder()
+    }
 
     /*
     // MARK: - Navigation
