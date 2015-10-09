@@ -29,13 +29,27 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func signinTapped(sender: UIButton) {
+        let usrEntered = txtUsername.text
+        let pwdEntered = txtPassword.text
         //Authentication Code
-        if txtUsername.text != "" && txtPassword.text != "" {
-            // Not Empty, Do something.
-        } else if txtUsername == "" {
+        if usrEntered != "" && pwdEntered != "" {
+            // Login the user
+            PFUser.logInWithUsernameInBackground(usrEntered!, password: pwdEntered!) {
+                (user: PFUser?, error: NSError?) -> Void in
+                if user != nil {
+                    dispatch_async(dispatch_get_main_queue()) {
+                        self.performSegueWithIdentifier("signInToNavigation", sender: self)
+                    }
+                } else {
+                    if let message: AnyObject = error!.userInfo["error"] {
+                        self.loginMsgTxt.text = "\(message)"
+                    }
+                }
+            }
+        } else if usrEntered == "" {
             // Empty, Notify user
             self.loginMsgTxt.text = "Username required!"
-        } else if txtPassword == "" {
+        } else if pwdEntered == "" {
             self.loginMsgTxt.text = "Password Required!"
         } else {
             self.loginMsgTxt.text = "Both fields Required!"
@@ -46,7 +60,13 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         sender.resignFirstResponder()
 
     }
+    @IBAction func userKeyBoardResignEnter(sender: AnyObject) {
+        sender.resignFirstResponder()
+    }
     @IBAction func pwdKeyBoardResignTouch(sender: AnyObject) {
+        sender.resignFirstResponder()
+    }
+    @IBAction func pwdKeyBoardResignEnter(sender: AnyObject) {
         sender.resignFirstResponder()
     }
     /*

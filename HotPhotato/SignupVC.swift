@@ -14,6 +14,7 @@ class SignupVC: UIViewController {
     @IBOutlet weak var txtPassword: UITextField!
     @IBOutlet weak var txtConfirmPassword: UITextField!
     @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var txtEmail: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,27 +28,35 @@ class SignupVC: UIViewController {
     }
     
     @IBAction func signupTapped(sender: AnyObject) {
-        var usrEntered = txtUsername.text
-        var pwdEntered = txtPassword.text
-        if pwdEntered != txtConfirmPassword.text {
-            self.messageLabel.text = "Passwords Do Not Match"
-        }
-        if usrEntered != "" && pwdEntered != "" {
-            userSignUp()
-        } else {
+        let usrEntered = txtUsername.text
+        let pwdEntered = txtPassword.text
+        let pwdConfirmEntered = txtConfirmPassword.text
+        let emailEntered = txtEmail.text
+        if usrEntered == "" && pwdEntered == "" && pwdConfirmEntered == "" && emailEntered == ""{
             self.messageLabel.text = "All Fields Required!"
+        } else if usrEntered == "" {
+            self.messageLabel.text = "Please enter username"
+        } else if pwdEntered == "" {
+            self.messageLabel.text = "Please enter a password"
+        } else if pwdEntered != pwdConfirmEntered {
+            self.messageLabel.text = "Passwords Do Not Match"
+        } else if emailEntered == "" {
+            self.messageLabel.text = "Please enter email address"
+        } else {
+            userSignUp()
         }
     }
     
     func userSignUp() {
-        var user = PFUser()
+        let user = PFUser()
         user.username = txtUsername.text
         user.password = txtPassword.text
+        user.email = txtEmail.text
         user.signUpInBackgroundWithBlock {
             (succeeded: Bool, error: NSError?) -> Void in
             if error == nil {
                 // Hooray! Let them use the app now.
-                self.messageLabel.text = "User Signed Up";
+                self.messageLabel.text = "User Signed Up!";
             } else {
                 // Show the errorString somewhere and let the user try again.
             }
@@ -62,11 +71,31 @@ class SignupVC: UIViewController {
         sender.resignFirstResponder()
     }
     
+    @IBAction func userKeyBoardResignEnter(sender: AnyObject) {
+        sender.resignFirstResponder()
+    }
+    
     @IBAction func pwdKeyBoardResignTouchDown(sender: AnyObject) {
         sender.resignFirstResponder()
     }
     
+    @IBAction func pwdKeyBoardResignEnter(sender: AnyObject) {
+        sender.resignFirstResponder()
+    }
+    
     @IBAction func pwdConfirmKeyBoardResignTouchDown(sender: AnyObject) {
+        sender.resignFirstResponder()
+    }
+    
+    @IBAction func pwdConfKBResignEnter(sender: AnyObject) {
+        sender.resignFirstResponder()
+    }
+    
+    @IBAction func emailKeyBoardResignTouchDown(sender: AnyObject) {
+        sender.resignFirstResponder()
+    }
+  
+    @IBAction func emailKeyBoardResignEnter(sender: AnyObject) {
         sender.resignFirstResponder()
     }
     
