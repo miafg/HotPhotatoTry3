@@ -58,6 +58,17 @@ class SignupVC: UIViewController {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
+    @IBAction func userKeyBoardResignTouchDown(sender: AnyObject) {
+        sender.resignFirstResponder()
+    }
+    
+    @IBAction func pwdKeyBoardResignTouchDown(sender: AnyObject) {
+        sender.resignFirstResponder()
+    }
+    
+    @IBAction func pwdConfirmKeyBoardResignTouchDown(sender: AnyObject) {
+        sender.resignFirstResponder()
+    }
     
     /*
     // MARK: - Navigation

@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-class LoginVC: UIViewController {
+class LoginVC: UIViewController, UITextFieldDelegate {
 
     
     @IBOutlet weak var txtUsername: UITextField!
@@ -42,27 +42,13 @@ class LoginVC: UIViewController {
         }
     }
     
-    @IBAction func usernameKeyBoardResign(sender: AnyObject) {
-        //sender.resignFirstResponder()
-        
-    }
     @IBAction func userKeyBoardResignTouch(sender: AnyObject) {
-       // sender.resignFirstResponder()
-        txtUsername.addTarget(nil, action:"firstResponderAction:", forControlEvents:.EditingDidEndOnExit)
+        sender.resignFirstResponder()
 
     }
-    @IBAction func userKeyBoardResignTouchUpOutside(sender: AnyObject) {
-        //sender.resignFirstResponder()
-
-    }
-    @IBAction func userKeyBoardResignEditEnd(sender: AnyObject) {
-        //sender.resignFirstResponder()
-    }
-    
-    @IBAction func pwKeyBoardResign(sender: AnyObject) {
+    @IBAction func pwdKeyBoardResignTouch(sender: AnyObject) {
         sender.resignFirstResponder()
     }
-
     /*
     // MARK: - Navigation
 

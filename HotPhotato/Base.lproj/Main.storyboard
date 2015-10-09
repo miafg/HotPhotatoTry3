@@ -83,18 +83,27 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="userKeyBoardResignTouchDown:" destination="0tX-bb-TqM" eventType="touchDown" id="L6m-qR-dNg"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" id="smJ-Mh-OBH">
                                 <rect key="frame" x="20" y="174" width="355" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="pwdKeyBoardResignTouchDown:" destination="0tX-bb-TqM" eventType="touchDown" id="A7t-tY-H9g"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" id="Z2E-2g-A9k">
                                 <rect key="frame" x="20" y="231" width="355" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="pwdConfirmKeyBoardResignTouchDown:" destination="0tX-bb-TqM" eventType="touchDown" id="eWM-Oe-45h"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5HK-r6-0DC">
                                 <rect key="frame" x="141" y="308" width="78" height="51"/>
@@ -154,10 +163,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="userKeyBoardResignEditEnd:" destination="Ee4-aa-0IL" eventType="editingDidEnd" id="uUE-aa-MZk"/>
                                     <action selector="userKeyBoardResignTouch:" destination="Ee4-aa-0IL" eventType="touchDown" id="oLu-vS-WNw"/>
-                                    <action selector="userKeyBoardResignTouchUpOutside:" destination="Ee4-aa-0IL" eventType="touchUpOutside" id="HTF-rc-vWE"/>
-                                    <action selector="usernameKeyBoardResign:" destination="Ee4-aa-0IL" eventType="editingDidEndOnExit" id="ltw-8D-L1Y"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" id="4V5-4m-rOk">
@@ -166,7 +172,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <connections>
-                                    <action selector="pwKeyBoardResign:" destination="Ee4-aa-0IL" eventType="editingDidEndOnExit" id="tq2-SK-Q46"/>
+                                    <action selector="pwdKeyBoardResignTouch:" destination="Ee4-aa-0IL" eventType="touchDown" id="G25-MP-alD"/>
                                 </connections>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hotPhotato.png" id="Fzo-YG-fKl">
@@ -223,7 +229,6 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="loginMsgTxt" destination="pXU-87-aUW" id="Cbq-yD-yPq"/>
-                        <outlet property="txtPassword" destination="4V5-4m-rOk" id="GjP-UA-j9K"/>
                         <outlet property="txtUsername" destination="pSY-Qt-ko1" id="keP-Uz-4gM"/>
                     </connections>
                 </viewController>
