@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		18A90FB819E4BFF2BBE1459A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E4C2B788DF26E194CE9DA91 /* libPods.a */; };
-		7B2779BD1BC56667007B75D8 /* hotPhotato.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B2779BC1BC56667007B75D8 /* hotPhotato.png */; settings = {ASSET_TAGS = (); }; };
 		7B2779BF1BC5CD85007B75D8 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2779BE1BC5CD85007B75D8 /* LoginVC.swift */; settings = {ASSET_TAGS = (); }; };
 		7B2779C11BC5CF53007B75D8 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2779C01BC5CF53007B75D8 /* SignupVC.swift */; settings = {ASSET_TAGS = (); }; };
 		7B28530C1BC55FE300298EE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B28530B1BC55FE300298EE3 /* AppDelegate.swift */; };
@@ -18,6 +17,8 @@
 		7B2853161BC55FE300298EE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B2853141BC55FE300298EE3 /* LaunchScreen.storyboard */; };
 		7B2853211BC55FE300298EE3 /* HotPhotatoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2853201BC55FE300298EE3 /* HotPhotatoTests.swift */; };
 		7B28532C1BC55FE300298EE3 /* HotPhotatoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B28532B1BC55FE300298EE3 /* HotPhotatoUITests.swift */; };
+		7BCBE4CA1BCAAF3200596CDC /* hotPhotato.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BCBE4C91BCAAF3200596CDC /* hotPhotato.png */; settings = {ASSET_TAGS = (); }; };
+		7BCBE4CC1BCAAFDD00596CDC /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 7BCBE4CB1BCAAFDD00596CDC /* Podfile */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +40,6 @@
 
 /* Begin PBXFileReference section */
 		1E4C2B788DF26E194CE9DA91 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B2779BC1BC56667007B75D8 /* hotPhotato.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hotPhotato.png; sourceTree = "<group>"; };
 		7B2779BE1BC5CD85007B75D8 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		7B2779C01BC5CF53007B75D8 /* SignupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		7B2853081BC55FE300298EE3 /* HotPhotato.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotPhotato.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +56,8 @@
 		7B28532B1BC55FE300298EE3 /* HotPhotatoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotPhotatoUITests.swift; sourceTree = "<group>"; };
 		7B28532D1BC55FE300298EE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B65144E1BC563D400277BC6 /* HotPhotato-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HotPhotato-Bridging-Header.h"; sourceTree = "<group>"; };
+		7BCBE4C91BCAAF3200596CDC /* hotPhotato.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hotPhotato.png; sourceTree = "<group>"; };
+		7BCBE4CB1BCAAFDD00596CDC /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		98C34F28EEB1A707B16A32AA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A1221053C46A4C130F050313 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,6 +100,7 @@
 		7B2852FF1BC55FE300298EE3 = {
 			isa = PBXGroup;
 			children = (
+				7BCBE4CB1BCAAFDD00596CDC /* Podfile */,
 				7B28530A1BC55FE300298EE3 /* HotPhotato */,
 				7B28531F1BC55FE300298EE3 /* HotPhotatoTests */,
 				7B28532A1BC55FE300298EE3 /* HotPhotatoUITests */,
@@ -127,7 +130,7 @@
 				7B2853141BC55FE300298EE3 /* LaunchScreen.storyboard */,
 				7B2853171BC55FE300298EE3 /* Info.plist */,
 				7B65144E1BC563D400277BC6 /* HotPhotato-Bridging-Header.h */,
-				7B2779BC1BC56667007B75D8 /* hotPhotato.png */,
+				7BCBE4C91BCAAF3200596CDC /* hotPhotato.png */,
 				7B2779BE1BC5CD85007B75D8 /* LoginVC.swift */,
 				7B2779C01BC5CF53007B75D8 /* SignupVC.swift */,
 			);
@@ -172,6 +175,7 @@
 				7B2853051BC55FE300298EE3 /* Frameworks */,
 				7B2853061BC55FE300298EE3 /* Resources */,
 				A69D8152550993B8905680F2 /* Copy Pods Resources */,
+				E63D58BFA4CCA877AA8EE873 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -267,10 +271,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BCBE4CC1BCAAFDD00596CDC /* Podfile in Resources */,
 				7B2853161BC55FE300298EE3 /* LaunchScreen.storyboard in Resources */,
+				7BCBE4CA1BCAAF3200596CDC /* hotPhotato.png in Resources */,
 				7B2853131BC55FE300298EE3 /* Assets.xcassets in Resources */,
 				7B2853111BC55FE300298EE3 /* Main.storyboard in Resources */,
-				7B2779BD1BC56667007B75D8 /* hotPhotato.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +324,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E63D58BFA4CCA877AA8EE873 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
