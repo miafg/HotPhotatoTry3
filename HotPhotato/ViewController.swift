@@ -23,7 +23,11 @@ class ViewController: UIViewController {
     }
 
     override func viewDidAppear(animated: Bool) {
-       self.performSegueWithIdentifier("goto_login", sender: self)
+        if (PFUser.currentUser() == nil) {
+            self.performSegueWithIdentifier("goto_login", sender: self)
+        } else {
+            self.performSegueWithIdentifier("goto_MainNav", sender: self)
+        }
         
     }
     
