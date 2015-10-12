@@ -19,6 +19,8 @@
 		7B28532C1BC55FE300298EE3 /* HotPhotatoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B28532B1BC55FE300298EE3 /* HotPhotatoUITests.swift */; };
 		7BCBE4CA1BCAAF3200596CDC /* hotPhotato.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BCBE4C91BCAAF3200596CDC /* hotPhotato.png */; settings = {ASSET_TAGS = (); }; };
 		7BCBE4CC1BCAAFDD00596CDC /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 7BCBE4CB1BCAAFDD00596CDC /* Podfile */; settings = {ASSET_TAGS = (); }; };
+		7BFC698F1BCC03DF0009E669 /* FriendsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFC698E1BCC03DF0009E669 /* FriendsVC.swift */; settings = {ASSET_TAGS = (); }; };
+		7BFC69911BCC03ED0009E669 /* AddFriendsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFC69901BCC03ED0009E669 /* AddFriendsVC.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		7B65144E1BC563D400277BC6 /* HotPhotato-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HotPhotato-Bridging-Header.h"; sourceTree = "<group>"; };
 		7BCBE4C91BCAAF3200596CDC /* hotPhotato.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hotPhotato.png; sourceTree = "<group>"; };
 		7BCBE4CB1BCAAFDD00596CDC /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		7BFC698E1BCC03DF0009E669 /* FriendsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsVC.swift; sourceTree = "<group>"; };
+		7BFC69901BCC03ED0009E669 /* AddFriendsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFriendsVC.swift; sourceTree = "<group>"; };
 		98C34F28EEB1A707B16A32AA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A1221053C46A4C130F050313 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,6 +137,8 @@
 				7BCBE4C91BCAAF3200596CDC /* hotPhotato.png */,
 				7B2779BE1BC5CD85007B75D8 /* LoginVC.swift */,
 				7B2779C01BC5CF53007B75D8 /* SignupVC.swift */,
+				7BFC698E1BCC03DF0009E669 /* FriendsVC.swift */,
+				7BFC69901BCC03ED0009E669 /* AddFriendsVC.swift */,
 			);
 			path = HotPhotato;
 			sourceTree = "<group>";
@@ -348,10 +354,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BFC69911BCC03ED0009E669 /* AddFriendsVC.swift in Sources */,
 				7B2779C11BC5CF53007B75D8 /* SignupVC.swift in Sources */,
 				7B28530E1BC55FE300298EE3 /* ViewController.swift in Sources */,
 				7B28530C1BC55FE300298EE3 /* AppDelegate.swift in Sources */,
 				7B2779BF1BC5CD85007B75D8 /* LoginVC.swift in Sources */,
+				7BFC698F1BCC03DF0009E669 /* FriendsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
