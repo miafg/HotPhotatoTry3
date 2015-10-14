@@ -112,7 +112,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Us6-kh-0gL">
                             <color key="tintColor" red="0.9164693813" green="0.44983229359999999" blue="0.24060233959999999" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="sYR-bn-CAJ" kind="modal" id="sfL-tM-iUf"/>
+                                <segue destination="sYR-bn-CAJ" kind="modal" id="3wN-cG-dfU"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -125,16 +125,6 @@
         <!--Find Friends-->
         <scene sceneID="X1I-i3-ul8">
             <objects>
-                <searchDisplayController id="1dO-VD-Oci">
-                    <connections>
-                        <outlet property="delegate" destination="LXk-nQ-s3T" id="p9x-cd-bM3"/>
-                        <outlet property="searchBar" destination="w69-5u-jIy" id="A1g-3f-aMd"/>
-                        <outlet property="searchContentsController" destination="LXk-nQ-s3T" id="ZH1-gH-uyb"/>
-                        <outlet property="searchResultsDataSource" destination="LXk-nQ-s3T" id="G6F-aS-TOw"/>
-                        <outlet property="searchResultsDelegate" destination="LXk-nQ-s3T" id="oqo-HE-cuz"/>
-                    </connections>
-                </searchDisplayController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8NE-LD-MM6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="LXk-nQ-s3T" customClass="AddFriendsVC" customModule="HotPhotato" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="0ka-Wc-kBX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -189,11 +179,22 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="friendSearch" destination="w69-5u-jIy" id="QmQ-tC-Zxt"/>
                         <outlet property="searchDisplayController" destination="1dO-VD-Oci" id="GqI-pK-nBb"/>
                     </connections>
                 </tableViewController>
+                <searchDisplayController id="1dO-VD-Oci">
+                    <connections>
+                        <outlet property="delegate" destination="LXk-nQ-s3T" id="p9x-cd-bM3"/>
+                        <outlet property="searchBar" destination="w69-5u-jIy" id="A1g-3f-aMd"/>
+                        <outlet property="searchContentsController" destination="LXk-nQ-s3T" id="ZH1-gH-uyb"/>
+                        <outlet property="searchResultsDataSource" destination="LXk-nQ-s3T" id="G6F-aS-TOw"/>
+                        <outlet property="searchResultsDelegate" destination="LXk-nQ-s3T" id="oqo-HE-cuz"/>
+                    </connections>
+                </searchDisplayController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8NE-LD-MM6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="603.5" y="2871.5"/>
+            <point key="canvasLocation" x="570.5" y="2879.5"/>
         </scene>
         <!--SignupVC-->
         <scene sceneID="Bb0-4b-rx7">
@@ -338,6 +339,7 @@
                                 </state>
                                 <connections>
                                     <action selector="signinTapped:" destination="Ee4-aa-0IL" eventType="touchUpInside" id="yfz-p9-A9c"/>
+                                    <segue destination="xMQ-Pg-xtO" kind="modal" identifier="signInToNavigation" id="yTb-qc-xoX"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7Ya-qz-wpA">
@@ -354,7 +356,7 @@
                                     <color key="titleColor" red="0.83311631939999997" green="0.34843333360000001" blue="0.03307022465" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="xMQ-Pg-xtO" kind="modal" identifier="signInToNavigation" id="ri6-w8-I2c"/>
+                                    <segue destination="0tX-bb-TqM" kind="modal" identifier="goto_sign_up" id="Gmo-Ws-2cc"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mbJ-ql-KnG">
@@ -428,6 +430,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sYR-bn-CAJ" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="ZGM-lG-kja"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qRd-XI-LQz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -439,13 +442,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Paz-05-Azp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="603.5" y="2029.5"/>
+            <point key="canvasLocation" x="1024.5" y="1993.5"/>
         </scene>
     </scenes>
     <resources>
         <image name="hotPhotato.png" width="1000" height="1000"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ri6-w8-I2c"/>
+        <segue reference="S9r-eG-pBx"/>
     </inferredMetricsTieBreakers>
 </document>

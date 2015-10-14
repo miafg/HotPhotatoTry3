@@ -59,6 +59,7 @@ class SignupVC: UIViewController {
                 self.messageLabel.text = "User Signed Up!";
             } else {
                 // Show the errorString somewhere and let the user try again.
+                //let errorString = error!.userInfo["error"] as? NSString
             }
         }
     }
